@@ -1,2 +1,4 @@
 *.o
 uspsv3
+cpubound
+iobound
