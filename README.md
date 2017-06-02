@@ -6,7 +6,7 @@ This is a project I worked on during Spring 2017.  A complete description of the
 This should work on any linux operating system.  Use the Makefile to create the executable "uspsv3".
 Invoke the executable on the command line using:
 
-- ./uspsv3 [--quantum=<msec>] [workload_file]
+- ./uspsv3 [--quantum=(msec)] [workload_file]
 
 Where msec is desired quantum expressed in milliseconds and the workload_file is a file containing a list of bash commands.
 If you do not specify quantum it will search for it in your bash environment variables.  If it is not there either it will exit.
