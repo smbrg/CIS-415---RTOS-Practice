@@ -34,6 +34,7 @@ Each of these executables will do meaningless busy work for about 1 minute each.
 
 So, if you run 
 - ./uspsv3 work2.txt --quantum=5000 
+
 You launch 6 of these programs, and then you can view the behavior of the scheduler by running the linux "top" command.
 There you will see that only one of these programs is executing at a time.  After about 6 minutes, they will all be done
 and your main program will terminate.
