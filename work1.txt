@@ -1,0 +1,7 @@
+echo this
+sleep 1
+ls -a -l
+an_illegal_program
+date
+sleep 1
+an_illegal_program

@@ -1,0 +1,6 @@
+./cpubound -name 1
+./cpubound -name 2
+./cpubound -name 3
+./iobound -name 1
+./iobound -name 2
+./iobound -name 3
