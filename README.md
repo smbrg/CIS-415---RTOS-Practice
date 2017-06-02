@@ -17,7 +17,7 @@ You can view the .txt files in this directory to see example workload files.
 
 ## What it does
 This program will read the workload file and fork a new process for every line in the file.
-The process will then execute the command and then terminate once it has finished.
+Each child process will then execute the command it was given and then terminate once it has finished.
 
 The original process will act as a Round Robin scheduler.  Each process is paused upon being created,
 and the original process will let each process execute for <quantum> milliseconds before it will interrupt the
