@@ -14,7 +14,6 @@ If you do not specify a workload_file it will read from stdin.
 
 You can view the .txt files in this directory to see example workload files.
 
-
 ## What it does
 This program will read the workload file and fork a new process for every line in the file.
 Each child process will then execute the command it was given and then terminate once it has finished.
@@ -25,3 +24,16 @@ process and put it back into the ready queue.  Then it will select the next proc
 that process start executing.
 
 Once all child processes have terminated, the original process will also terminate.
+
+## Other
+You can compile cpubound.c and iobound.c to create some other executables to see the behavior of the scheduler.
+- gcc -o cpubound cpubound.c
+- gcc -o iobound iobound.c
+
+Each of these executables will do meaningless busy work for about 1 minute each.
+
+So, if you run 
+- ./uspsv3 work2.txt --quantum=5000 
+You launch 6 of these programs, and then you can view the behavior of the scheduler by running the linux "top" command.
+There you will see that only one of these programs is executing at a time.  After about 6 minutes, they will all be done
+and your main program will terminate.
