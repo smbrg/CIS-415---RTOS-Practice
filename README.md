@@ -12,6 +12,8 @@ Where msec is desired quantum expressed in milliseconds and the workload_file is
 If you do not specify quantum it will search for it in your bash environment variables.  If it is not there either it will exit.
 If you do not specify a workload_file it will read from stdin.
 
+You can view the .txt files in this directory to see example workload files.
+
 
 ## What it does
 This program will read the workload file and fork a new process for every line in the file.
